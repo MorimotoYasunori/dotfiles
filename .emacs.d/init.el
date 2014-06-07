@@ -13,7 +13,7 @@
 	    (normal-top-level-add-subdirs-to-load-path))))))
 
 ;; 引数のディレクトリとそのサブディレクトリをload-pathに追加
-(add-to-load-path "elisp" "conf" "public_repos" "etc" "info")
+(add-to-load-path "elisp" "conf" "public_repos" "etc" "info" "el-get")
 
 ;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el
 ;; (require 'init-loader)
@@ -30,6 +30,21 @@
   ;; install-elisp の関数を利用可能にする
   (auto-install-compatibility-setup))
 
+;; 2013-10-12 http://www.clear-code.com/blog/2012/3/20.html より追加。
+;;(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+(unless (require 'el-get nil t)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (end-of-buffer)
+    (eval-print-last-sexp)))
+;; レシピ置き場
+(add-to-list 'el-get-recipe-path
+             (concat (file-name-directory load-file-name) "/el-get/recipes"))
+;; 追加のレシピ置き場
+(add-to-list 'el-get-recipe-path
+             "~/.emacs.d/conf/el-get/local-recipes")
+
 ;; clパッケージを読み込む
 (require 'cl)
 
@@ -42,44 +57,55 @@
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
 ;; P86 Windowsの場合のファイル名の設定
-(when (eq window-system 'w32)
-  (set-file-name-coding-system 'cp932)
-  (setq locale-coding-system 'cp932))
+;;(when (eq window-system 'w32)
+;;  (set-file-name-coding-system 'cp932)
+;;  (setq locale-coding-system 'cp932))
 
 (setq initial-frame-alist
       (append (list
 	       '(width . 100)
-	       '(height . 40)
-	       '(top . 30)
-	       '(left . 500)
-	       '(font . "Consolas-12")
+	       '(height . 50)
+	       '(top . 350)
+	       '(left . 700)
 	       )
 	      initial-frame-alist))
 (setq default-frame-alist initial-frame-alist)
 
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:family #("メイリオ" 0 4 (charset cp932-2-byte)) :foundry "outline" :slant normal :weight normal :height 120 :width normal)))))
+;; 英語
+(set-face-attribute 'default nil
+      :family "Menlo" ;; font
+      :height 150)    ;; font size
+
+;; 日本語
+(set-fontset-font
+  nil 'japanese-jisx0208
+  (font-spec :family "Hiragino_Kaku_Gothic_ProN")) ;; font
+
+;; 半角と全角の比を1:2にしたければ
+(setq face-font-rescale-alist
+;;    '((".*Hiragino_Mincho_pro.*" . 1.2)))
+;;    '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.2))) ;; Mac用フォント設定
+    '((".*Inconsolata.*" . 1.2))) ;; Mac用フォント設定
 
 ;; ターミナル以外はツールバー、スクロールバーを非表示
-;; (when window-system
-  ;; tool-barを非表示
-  ;; (tool-bar-mode 0)
-  ;; scroll-barを非表示
-  ;; (scroll-bar-mode 0)
-;; )
+(when window-system
+;; tool-barを非表示
+  (tool-bar-mode 0)
+;; scroll-barを非表示
+  (scroll-bar-mode 0))
 
 ;; スタートアップメッセージを非表示
-;; (setq inhibit-startup-screen t)
+;;(setq inhibit-startup-screen t)
 
 ;; タイトルバーにファイルのフルパスを表示
 (setq frame-title-format "%f")
 
 ;; 行番号を常に表示する
 (global-linum-mode t)
+
+;; 背景色を黒に、前景色を緑系に変更
+(set-background-color "black")
+(set-foreground-color "#55ff55")
 
 ;;; P100 現在行のハイライト
 (defface my-hl-line-face
@@ -99,7 +125,7 @@
 (setq show-paren-delay 0) ; 表示までの秒数。初期値は0.125
 (show-paren-mode t) ; 有効化
 ;; parenのスタイル: expressionは括弧内も強調表示
-;; (setq show-paren-style 'expression)
+ (setq show-paren-style 'expression)
 ;; フェイスを変更する
 (set-face-background 'show-paren-match-face nil)
 (set-face-underline-p 'show-paren-match-face "red")
@@ -138,3 +164,32 @@
  ;; If there is more than one, they won't work right.
  '(show-paren-mode t))
 (put 'downcase-region 'disabled nil)
+
+;; ruby-mode
+(autoload 'ruby-mode "ruby-mode"
+  "Mode for editing ruby source files" t)
+(add-to-list 'auto-mode-alist '("\\.rb$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Capfile$" . ruby-mode))
+(add-to-list 'auto-mode-alist '("Gemfile$" . ruby-mode))
+
+;;; ruby-blockマイナーモード
+(require 'ruby-block)
+(ruby-block-mode t)
+(setq ruby-block-highlight-toggle t)
+;; 何もしない
+;;(setq ruby-block-highlight-toggle 'noghing)
+;; ミニバッファに表示
+;;(setq ruby-block-highlight-toggle 'minibuffer)
+;; オーバレイする
+;;(setq ruby-block-highlight-toggle 'overlay)
+;; ミニバッファに表示し, かつ, オーバレイする.
+(setq ruby-block-highlight-toggle t)
+
+;; ruby-electric.el --- electric editing commands for ruby files
+(require 'ruby-electric)
+(add-hook 'ruby-mode-hook '(lambda () (ruby-electric-mode t)))
+(setq ruby-electric-expand-delimiters-list nil)
+
+;; cua-modeの設定
+(cua-mode t) ; cua-modeをオン
+(setq cua-enable-cua-keys nil) ; CUAキーバインドを無効にする
