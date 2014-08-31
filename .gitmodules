@@ -1,0 +1,6 @@
+[submodule "/Users/Yasunori/dotfiles/vundle.git"]
+	path = /Users/Yasunori/dotfiles/vundle.git
+	url = http://github.com/gmarik/vundle.git
+[submodule "/Users/Yasunori/dotfiles/vimfiles/vundle.git"]
+	path = /Users/Yasunori/dotfiles/vimfiles/vundle.git
+	url = http://github.com/gmarik/vundle.git
