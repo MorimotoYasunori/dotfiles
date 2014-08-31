@@ -1,0 +1,31 @@
+"----------
+" 基本的な設定
+"----------
+set showtabline=2
+set imdisable
+set guioptions-=T
+set antialias
+set tabstop=2
+set number
+set nobackup
+set visualbell t_vb=
+set nowrapscan
+
+"Color Scheme
+syntax enable
+set background=dark
+colorscheme solarized 
+
+if has('mac')
+        set transparency=20         " opacity
+        set guifont=Inconsolata:h14 " font
+        set columns=120             " width
+        set lines=50               " line
+else
+        set guifont=Inconsolata\ 12
+        set columns=100
+        set lines=40
+endif
+
+set mouse=a                         " どのモードでもマウスを利用可能に
+set nomousefocus                    " マウス移動によるフォーカス切り替えを無効に

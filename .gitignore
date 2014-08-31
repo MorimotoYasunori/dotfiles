@@ -1,4 +1,6 @@
-.el~
-.un~
+*~
+*.el~
+*.elc~
+*.un~
 ..gitignore.un~
 .DS_Store
