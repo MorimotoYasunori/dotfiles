@@ -1,5 +1,15 @@
 " Common ----------------------
 set nocompatible               " vim互換をオフにする
+filetype off
+
+set rtp+=~/.vim/vundle.git/ " vundleのディレクトリ
+call vundle#rc()
+Bundle 'Shougo/neocomplcache'  " Bundle...は使用するプラグインを書く。詳細はGitHubのREADMEが詳しい。
+Bundle 'Shougo/unite.vim'
+Bundle 'thinca/vim-ref'
+Bundle 'thinca/vim-quickrun'
+filetype plugin indent on      " required!
+
 colorscheme solarized          " カラースキームの設定
 set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる
 
