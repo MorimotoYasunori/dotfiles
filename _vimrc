@@ -65,7 +65,7 @@ hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue
 " 全角スペースの色を変更
 match ZenkakuSpace /　/ 
 " ESCでIMEを確実にOFF
-inoremap <ESC> <ESC>:set iminsert=0<CR> 
+"inoremap <ESC> <ESC>:set iminsert=0<CR> 
 
 " Config for neocomplcache.vim
 " Disable AutoComplPop.

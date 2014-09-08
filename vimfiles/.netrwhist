@@ -1,9 +1,5 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/Yasunori/ruby_ex'
-let g:netrw_dirhist_2='/Users/Yasunori/rails_projects/open-wripe'
-let g:netrw_dirhist_3='/Users/Yasunori/rails_projects/open-wripe/app'
-let g:netrw_dirhist_4='/Users/Yasunori/rails_projects/open-wripe/app/models'
-let g:netrw_dirhist_5='/Users/Yasunori/src/practical-vim-code/ex_mode'
-let g:netrw_dirhist_6='/Users/Yasunori/projects/shincho_check'
-let g:netrw_dirhist_7='/Users/Yasunori/projects/blog/source'
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/Users/Yasunori/rails_projects/sample_app/app/views/static_pages'
+let g:netrw_dirhist_2='/Users/Yasunori/rails_projects/sample_app/app/views'
+let g:netrw_dirhist_3='/Users/Yasunori/rails_projects/sample_app/app/views/layouts'
