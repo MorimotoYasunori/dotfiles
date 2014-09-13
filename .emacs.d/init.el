@@ -87,6 +87,9 @@
 ;;    '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.2))) ;; Mac用フォント設定
     '((".*Inconsolata.*" . 1.2))) ;; Mac用フォント設定
 
+(add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
+(load-theme 'solarized-dark t) ;; または (load-theme 'solarized-light t)
+
 ;; ターミナル以外はツールバー、スクロールバーを非表示
 (when window-system
 ;; tool-barを非表示
