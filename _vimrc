@@ -6,13 +6,23 @@ set encoding=utf-8
 set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
 set fileformats=unix,dos,mac
 
-set rtp+=~/.vim/vundle.git/ " vundleのディレクトリ
-call vundle#rc()
-Bundle 'Shougo/neocomplcache.vim'
-Bundle 'Shougo/unite.vim'
-Bundle 'thinca/vim-ref'
-Bundle 'thinca/vim-quickrun'
+if has('vim_starting')
+  set runtimepath+=~/.vim/bundle/neobundle.vim " neobundleのディレクトリ
+  call neobundle#rc(expand('~/.vim/bundle/'))
+endif
+NeoBundleFetch 'Shougo/neobundle.vim'
+
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplchache.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-haml'
+
 filetype plugin indent on      " required!
+filetype indent on
+syntax on
 
 colorscheme solarized          " カラースキームの設定
 set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる
@@ -21,13 +31,12 @@ set background=dark            " 背景色の傾向(カラースキームがそ�
 set autoread                   " 更新時自動再読込み
 set hidden                     " 編集中でも他のファイルを開けるようにする
 set noswapfile                 " スワップファイルを作らない
+"set directory=$HOME/vimbackup  "スワップファイル用のディレクトリを指定する
 "set nobackup                   " バックアップを取らない
 set backupdir=$HOME/vimbackup  "バックアップファイルのディレクトリを指定する
 syntax on                      " シンタックスカラーリングオン
 set clipboard=unnamed          "クリップボードをと連携する
 
-"スワップファイル用のディレクトリを指定する
-set directory=$HOME/vimbackup
     
 " Indent ----------------------
 " tabstop:                     " Tab文字を画面上で何文字分に展開するか
