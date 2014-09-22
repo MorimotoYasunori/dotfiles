@@ -3,7 +3,7 @@ set nocompatible               " vim互換をオフにする
 filetype off
 
 set encoding=utf-8
-set fileencodings=iso-2022-jp,euc-jp,sjis,utf-8
+set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set fileformats=unix,dos,mac
 
 if has('vim_starting')
