@@ -57,9 +57,9 @@
 (set-language-environment "Japanese")
 (prefer-coding-system 'utf-8)
 ;; P86 Windowsの場合のファイル名の設定
-;;(when (eq window-system 'w32)
-;;  (set-file-name-coding-system 'cp932)
-;;  (setq locale-coding-system 'cp932))
+(when (eq window-system 'w32)
+  (set-file-name-coding-system 'cp932)
+  (setq locale-coding-system 'cp932))
 
 (setq initial-frame-alist
       (append (list
