@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/Users/Yasunori/src/rack-master'
-let g:netrw_dirhist_2='/Users/Yasunori/src/rack-master/lib'
-let g:netrw_dirhist_3='/Users/Yasunori/src/rack-master/lib/rack'
-let g:netrw_dirhist_4='/Users/Yasunori/projects/THE_SNOWBALL/theme-tk-style'
-let g:netrw_dirhist_5='/Users/Yasunori/projects/THE_SNOWBALL/theme-tk-style/stylesheets'
-let g:netrw_dirhist_6='/Users/Yasunori/projects/THE_SNOWBALL/posts'
-let g:netrw_dirhist_7='/Users/Yasunori/projects/THE_SNOWBALL/posts/life'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/yasunori/rails_projects/sample_app/app/views/static_pages'
