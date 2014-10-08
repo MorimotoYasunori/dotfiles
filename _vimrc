@@ -8,10 +8,15 @@ set fileformats=unix,dos,mac
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim " neobundleのディレクトリ
-  call neobundle#rc(expand('~/.vim/bundle/'))
 endif
+
+call neobundle#begin(expand('~/.vim/bundle/'))
+
+" Let NeoBundle manage NeoBundle
+" Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
+" My Bundles here:
 NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplchache.vim'
@@ -19,6 +24,9 @@ NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
+NeoBundle 'scrooloose/nerdtree'
+
+call neobundle#end()
 
 filetype plugin indent on      " required!
 filetype indent on
@@ -80,3 +88,6 @@ match ZenkakuSpace /　/
 " ESCでIMEを確実にOFF
 "inoremap <ESC> <ESC>:set iminsert=0<CR> 
 
+" If there are uninstalled bundles found on startup,
+" this will conveniently prompt you to install them.
+NeoBundleCheck

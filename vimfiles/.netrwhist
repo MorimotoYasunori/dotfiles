@@ -1,10 +1,7 @@
 let g:netrw_dirhistmax  =10
-<<<<<<< HEAD
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/Yasunori/src/mruby-master'
-let g:netrw_dirhist_2='/Users/Yasunori/src/mruby-master/src'
-let g:netrw_dirhist_3='/Users/Yasunori/Dropbox/bookmeter-review'
-=======
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =5
 let g:netrw_dirhist_1='/home/yasunori/rails_projects/sample_app/app/views/static_pages'
->>>>>>> 229eaa0ee93cc223d570cf39550020cc415e6133
+let g:netrw_dirhist_2='/Users/Yasunori/projects/THE_SNOWBALL'
+let g:netrw_dirhist_3='/Users/Yasunori/projects/THE_SNOWBALL/compiled'
+let g:netrw_dirhist_4='/Users/Yasunori/projects/THE_SNOWBALL'
+let g:netrw_dirhist_5='/Users/Yasunori/projects/THE_SNOWBALL/_root'
