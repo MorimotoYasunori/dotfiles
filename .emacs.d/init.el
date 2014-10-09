@@ -16,8 +16,8 @@
 (add-to-load-path "elisp" "conf" "public_repos" "etc" "info" "el-get")
 
 ;; http://coderepos.org/share/browser/lang/elisp/init-loader/init-loader.el
-;; (require 'init-loader)
-;; (init-loader-load "~/.emacs.d/conf") ; 設定ファイルがあるディレクトリを指定
+(require 'init-loader)
+(init-loader-load "~/.emacs.d/conf") ; 設定ファイルがあるディレクトリを指定
 
 ;; auto-installの設定
 (when (require 'auto-install nil t)
@@ -63,29 +63,32 @@
 
 (setq initial-frame-alist
       (append (list
-	       '(width . 100)
-	       '(height . 50)
-	       '(top . 350)
-	       '(left . 700)
+	       '(width . 81)
+	       '(height . 35)
+	       '(top . 40)
+	       '(left . 200)
+         '(font . "Ricty-12")
 	       )
 	      initial-frame-alist))
 (setq default-frame-alist initial-frame-alist)
 
 ;; 英語
-(set-face-attribute 'default nil
-      :family "Menlo" ;; font
-      :height 150)    ;; font size
+;(set-face-attribute 'default nil
+;      :family "Menlo" ;; font
+;      :height 150)    ;; font size
 
 ;; 日本語
-(set-fontset-font
-  nil 'japanese-jisx0208
-  (font-spec :family "Hiragino_Kaku_Gothic_ProN")) ;; font
+;(set-fontset-font
+;  nil 'japanese-jisx0208
+;  (font-spec :family "Hiragino_Kaku_Gothic_ProN")) ;; font
+
+(set-frame-font "Ricty-12")
 
 ;; 半角と全角の比を1:2にしたければ
-(setq face-font-rescale-alist
+;(setq face-font-rescale-alist
 ;;    '((".*Hiragino_Mincho_pro.*" . 1.2)))
 ;;    '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.2))) ;; Mac用フォント設定
-    '((".*Inconsolata.*" . 1.2))) ;; Mac用フォント設定
+;    '((".*Inconsolata.*" . 1.2))) ;; Mac用フォント設定
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t) ;; または (load-theme 'solarized-light t)
@@ -98,7 +101,7 @@
   (scroll-bar-mode 0))
 
 ;; スタートアップメッセージを非表示
-;;(setq inhibit-startup-screen t)
+(setq inhibit-startup-screen t)
 
 ;; タイトルバーにファイルのフルパスを表示
 (setq frame-title-format "%f")
