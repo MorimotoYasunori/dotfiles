@@ -5,3 +5,4 @@
 .bash*
 .DS_Store
 /vimfiles/bundle/
+.emacs.d/el-get/
