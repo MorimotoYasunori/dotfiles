@@ -1,8 +1,9 @@
 *~
 *.el~
 *.elc~
-*.un~
+.*.un~
 .bash*
 .DS_Store
 /vimfiles/bundle/
+/vimfiles/undo/
 .emacs.d/el-get/
