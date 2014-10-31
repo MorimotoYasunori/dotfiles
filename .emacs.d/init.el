@@ -72,22 +72,22 @@
 (setq default-frame-alist initial-frame-alist)
 
 ;; 英語
-(set-face-attribute 'default nil
-      :family "Menlo" ;; font
-      :height 150)    ;; font size
+;(set-face-attribute 'default nil
+;      :family "Menlo" ;; font
+;      :height 150)    ;; font size
 
 ;; 日本語
-(set-fontset-font
-  nil 'japanese-jisx0208
-  (font-spec :family "Hiragino_Kaku_Gothic_ProN")) ;; font
+;(set-fontset-font
+;  nil 'japanese-jisx0208
+;  (font-spec :family "Hiragino_Kaku_Gothic_ProN")) ;; font
 
-;(set-frame-font "Ricty-12")
+(set-frame-font "Ricty-12")
 
 ;; 半角と全角の比を1:2にしたければ
-(setq face-font-rescale-alist
+;(setq face-font-rescale-alist
 ;;    '((".*Hiragino_Mincho_pro.*" . 1.2)))
 ;;    '((".*Hiragino_Kaku_Gothic_ProN.*" . 1.2))) ;; Mac用フォント設定
-    '((".*Inconsolata.*" . 1.2))) ;; Mac用フォント設定
+;    '((".*Inconsolata.*" . 1.2))) ;; Mac用フォント設定
 
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes/emacs-color-theme-solarized")
 (load-theme 'solarized-dark t) ;; または (load-theme 'solarized-light t)
