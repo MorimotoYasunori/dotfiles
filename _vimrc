@@ -25,6 +25,7 @@ NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'haya14busa/vim-migemo'
 
 call neobundle#end()
 
