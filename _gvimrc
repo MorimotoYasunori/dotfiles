@@ -2,7 +2,6 @@
 " 基本的な設定
 "----------
 set showtabline=2
-"set imdisable
 set guioptions-=T
 set antialias
 set tabstop=2
@@ -22,9 +21,11 @@ if has('mac')
         set columns=120             " width
         set lines=50                " line
 endif
+if has('unix')
+        set transparency=05
         set guifont=Ricty:h15
-        set columns=82
-        set lines=35
+        set columns=100
+        set lines=40
 endif
 
 set mouse=                          " マウス操作を無効に
