@@ -21,19 +21,30 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache.vim'
 NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'tpope/vim-rails'
 NeoBundle 'tpope/vim-haml'
 NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'haya14busa/vim-migemo'
 
 call neobundle#end()
 
 filetype plugin indent on      " required!
 filetype indent on
-syntax on
 
-colorscheme solarized          " カラースキームの設定
+let g:solarized_temcolors=16
+let g:solarized_termtrans=1
+let g:solarized_degrade=0
+let g:solarized_bold=0
+let g:solarized_underline=0
+let g:solarized_italic=0
+let g:solarized_contrast='normal'
+let g:solarized_visibility='normal'
+
+syntax enable
 set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる
+colorscheme solarized          " カラースキームの設定
 
 " File ------------------------
 set autoread                   " 更新時自動再読込み
