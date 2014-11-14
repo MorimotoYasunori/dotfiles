@@ -21,9 +21,9 @@ if has('mac')
         set guifont=Inconsolata:h16 " font
         set columns=120             " width
         set lines=50                " line
-else
-        set guifont=Inconsolata\ 12
-        set columns=100
+endif
+        set guifont=Ricty:h15
+        set columns=82
         set lines=35
 endif
 
