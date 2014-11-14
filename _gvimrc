@@ -15,17 +15,17 @@ syntax enable
 set background=light
 colorscheme solarized 
 
-if has('mac')
-        set transparency=05         " opacity
-        set guifont=Inconsolata:h16 " font
-        set columns=120             " width
-        set lines=50                " line
-endif
 if has('unix')
         set transparency=05
         set guifont=Ricty:h15
         set columns=100
         set lines=40
+endif
+if has('mac')
+        set transparency=05         " opacity
+        set guifont=Inconsolata:h16 " font
+        set columns=120             " width
+        set lines=50                " line
 endif
 
 set mouse=                          " マウス操作を無効に
