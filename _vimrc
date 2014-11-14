@@ -5,6 +5,8 @@ filetype off
 set encoding=utf-8
 set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
 set fileformats=unix,dos,mac
+set columns=82
+set lines=40
 
 if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim " neobundleのディレクトリ
@@ -43,8 +45,8 @@ let g:solarized_contrast='normal'
 let g:solarized_visibility='normal'
 
 syntax enable
-set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる
 colorscheme solarized          " カラースキームの設定
+set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる
 
 " File ------------------------
 set autoread                   " 更新時自動再読込み

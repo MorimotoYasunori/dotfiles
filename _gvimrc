@@ -17,8 +17,8 @@ colorscheme solarized
 
 if has('unix')
         set transparency=05
-        set guifont=Ricty:h15
-        set columns=100
+        set guifont=Ricty\ 12
+        set columns=82
         set lines=40
 endif
 if has('mac')
