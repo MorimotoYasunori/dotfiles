@@ -55,10 +55,8 @@ set noswapfile                 " スワップファイルを作らない
 "set directory=$HOME/vimbackup  "スワップファイル用のディレクトリを指定する
 "set nobackup                   " バックアップを取らない
 set backupdir=$HOME/vimbackup  "バックアップファイルのディレクトリを指定する
-syntax on                      " シンタックスカラーリングオン
-set clipboard=unnamed          "クリップボードをと連携する
+set clipboard=unnamed          "クリップボードを無名レジスタと連携する
 
-    
 " Indent ----------------------
 " tabstop:                     " Tab文字を画面上で何文字分に展開するか
 " shiftwidth:                  " cindentやautoindent時に挿入されるインデントの幅
@@ -74,23 +72,24 @@ set mouse=                     " マウスを無効に
 
 "変更中のファイルでも、保存しないで他のファイルを表示する
 set hidden
-      
+ 
 "インクリメンタルサーチを行う
 set incsearch
-       
+
 "行番号を表示する
 set number
-        
+set ruler
+ 
 "閉括弧が入力された時、対応する括弧を強調する
 set showmatch
-         
+ 
 "新しい行を作った時に高度な自動インデントを行う
 set smarttab
-          
+ 
 " grep検索を設定する
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
-           
+
 " 検索結果のハイライトをEsc連打でクリアする
 nnoremap <ESC><ESC> :nohlsearch<CR>
 
