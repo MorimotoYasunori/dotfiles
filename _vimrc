@@ -51,22 +51,22 @@ set autoread                   " 更新時自動再読込み
 set hidden                     " 編集中でも他のファイルを開けるようにする
 set noswapfile                 " スワップファイルを作らない
 "set directory=$HOME/vimbackup  "スワップファイル用のディレクトリを指定する
-"set nobackup                   " バックアップを取らない
-set backupdir=$HOME/vimbackup  "バックアップファイルのディレクトリを指定する
+set nobackup                   " バックアップを取らない
+"set backupdir=$HOME/vimbackup  "バックアップファイルのディレクトリを指定する
 set clipboard=unnamed          "クリップボードを無名レジスタと連携する
 
 " Indent ----------------------
-" tabstop:                     " Tab文字を画面上で何文字分に展開するか
-" shiftwidth:                  " cindentやautoindent時に挿入されるインデントの幅
-set expandtab                  " Tabの代わりに空白文字を指定する
+" tabstop:                         " Tab文字を画面上で何文字分に展開するか
+" shiftwidth:                      " cindentやautoindent時に挿入されるインデントの幅
+set expandtab                      " Tabの代わりに空白文字を指定する
 set tabstop=2 shiftwidth=2 softtabstop=0
-set autoindent smartindent     " 自動インデント, スマートインデント
+set autoindent smartindent         " 自動インデント, スマートインデント
 
 " Assist imputing -------------
-set backspace=indent,eol,start " バックスペースで特殊記号も削除可能に
-set formatoptions=lmoq         " 整形オプション, マルチバイト系を追加
-set whichwrap=b,s,[,],<,>,~    " カーソルを行頭, 行末で止まらないようにする
-set mouse=                     " マウスを無効に
+set backspace=indent,eol,start     " バックスペースで特殊記号も削除可能に
+set formatoptions=lmoq             " 整形オプション, マルチバイト系を追加
+set whichwrap=b,s,h,l,[,],<,>,~    " カーソルを行頭, 行末で止まらないようにする
+set mouse=                         " マウスを無効に
 
 "変更中のファイルでも、保存しないで他のファイルを表示する
 set hidden
