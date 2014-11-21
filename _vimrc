@@ -14,19 +14,19 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+NeoBundleFetch 'git://github.com/Shougo/neobundle.vim.git'
 
 " My Bundles here:
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'haya14busa/vim-migemo'
+NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundle 'git://github.com/Shougo/unite.vim.git'
+NeoBundle 'git://github.com/Shougo/neocomplcache.vim.git'
+NeoBundle 'git://github.com/Shougo/neosnippet.vim.git'
+NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
+NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
+NeoBundle 'git://github.com/tpope/vim-rails.git'
+NeoBundle 'git://github.com/tpope/vim-haml.git'
+NeoBundle 'git://github.com/scrooloose/nerdtree.git'
+NeoBundle 'git://github.com/haya14busa/vim-migemo.git'
 
 call neobundle#end()
 

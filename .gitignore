@@ -4,6 +4,7 @@
 .*.un~
 .bash*
 .DS_Store
+/bundle/
 /vimfiles/bundle/
 /vimfiles/undo/
 .emacs.d/el-get/
