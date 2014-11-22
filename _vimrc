@@ -78,6 +78,9 @@ set incsearch
 set number
 set ruler
  
+"ステータスバーに文字コードを表示する
+set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
+
 "閉括弧が入力された時、対応する括弧を強調する
 set showmatch
  
