@@ -15,12 +15,6 @@ syntax enable
 set background=light
 colorscheme solarized 
 
-if has('unix')
-        set transparency=05
-        set guifont=Ricty\ 15
-        set columns=100
-        set lines=40
-endif
 if has('mac')
         set transparency=05         " opacity
         set guifont=Inconsolata:h16 " font
@@ -30,3 +24,4 @@ endif
 
 set mouse=                          " マウス操作を無効に
 set nomousefocus                    " マウス移動によるフォーカス切り替えを無効に
+

@@ -10,6 +10,12 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim " neobundleのディレクトリ
 endif
 
+if has('gui_gtk2')
+  set guifont=Inconsolata\ 15
+  set columns=100
+  set lines=40
+endif
+
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
@@ -50,9 +56,7 @@ set background=dark            " 背景色の傾向(カラースキームがそ�
 set autoread                   " 更新時自動再読込み
 set hidden                     " 編集中でも他のファイルを開けるようにする
 set noswapfile                 " スワップファイルを作らない
-"set directory=$HOME/vimbackup  "スワップファイル用のディレクトリを指定する
 set nobackup                   " バックアップを取らない
-"set backupdir=$HOME/vimbackup  "バックアップファイルのディレクトリを指定する
 set clipboard=unnamed          "クリップボードを無名レジスタと連携する
 
 " Indent ----------------------
@@ -78,6 +82,8 @@ set incsearch
 set number
 set ruler
  
+"ステータスバーを常に表示
+set laststatus=2
 "ステータスバーに文字コードを表示する
 set statusline=%<%f\ %m%r%h%w%{'['.(&fenc!=''?&fenc:&enc).']['.&ff.']'}%=%l,%c%V%8P
 
