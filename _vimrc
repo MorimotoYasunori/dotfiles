@@ -11,9 +11,9 @@ if has('vim_starting')
 endif
 
 if has('gui_gtk2')
-  set guifont=Inconsolata\ 15
+  set guifont=Inconsolata\ 12
   set columns=100
-  set lines=40
+  set lines=35
 endif
 
 call neobundle#begin(expand('~/.vim/bundle/'))
