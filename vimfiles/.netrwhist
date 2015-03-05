@@ -1,7 +1,9 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_cnt =7
 let g:netrw_dirhist_1='/home/yasunori/rails_projects/sample_app/app/views/static_pages'
 let g:netrw_dirhist_2='/Users/Yasunori/projects/THE_SNOWBALL'
 let g:netrw_dirhist_3='/Users/Yasunori/projects/THE_SNOWBALL/compiled'
 let g:netrw_dirhist_4='/Users/Yasunori/projects/THE_SNOWBALL'
 let g:netrw_dirhist_5='/Users/Yasunori/projects/THE_SNOWBALL/_root'
+let g:netrw_dirhist_6='/Users/Yasunori/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/ruhoh-2.6/lib/ruhoh'
+let g:netrw_dirhist_7='/Users/Yasunori/.rbenv/versions/2.2.0/lib/ruby/gems/2.2.0/gems/ruhoh-2.6/lib/ruhoh/converters'

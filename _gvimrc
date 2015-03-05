@@ -17,7 +17,7 @@ colorscheme solarized
 
 if has('mac')
         set transparency=05         " opacity
-        set guifont=Inconsolata:h16 " font
+        set guifont=Ricty:h16       " font
         set columns=120             " width
         set lines=50                " line
 endif
