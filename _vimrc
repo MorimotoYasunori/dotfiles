@@ -20,19 +20,22 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
-NeoBundleFetch 'git://github.com/Shougo/neobundle.vim.git'
+NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-NeoBundle 'git://github.com/Shougo/neobundle.vim.git'
-NeoBundle 'git://github.com/Shougo/unite.vim.git'
-NeoBundle 'git://github.com/Shougo/neocomplcache.vim.git'
-NeoBundle 'git://github.com/Shougo/neosnippet.vim.git'
-NeoBundle 'git://github.com/altercation/vim-colors-solarized.git'
-NeoBundle 'git://github.com/vim-ruby/vim-ruby.git'
-NeoBundle 'git://github.com/tpope/vim-rails.git'
-NeoBundle 'git://github.com/tpope/vim-haml.git'
-NeoBundle 'git://github.com/scrooloose/nerdtree.git'
-NeoBundle 'git://github.com/haya14busa/vim-migemo.git'
+NeoBundle 'Shougo/neobundle.vim'
+NeoBundle 'Shougo/unite.vim'
+NeoBundle 'Shougo/neocomplcache.vim'
+NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'vim-jp/autofmt'
+NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'tpope/vim-endwise'
+NeoBundle 'tpope/vim-rails'
+NeoBundle 'tpope/vim-haml'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'scrooloose/nerdtree'
+NeoBundle 'haya14busa/vim-migemo'
 
 call neobundle#end()
 
@@ -93,6 +96,9 @@ set showmatch
 "新しい行を作った時に高度な自動インデントを行う
 set smarttab
  
+" migemoの辞書をutf-8に指定
+set migemodict=/usr/local/share/migemo/utf-8/migemo-dict
+
 " grep検索を設定する
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
 set grepprg=grep\ -nh
