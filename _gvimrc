@@ -12,7 +12,7 @@ set nowrapscan
 
 "Color Scheme
 syntax enable
-set background=light
+set background=dark
 colorscheme solarized 
 
 if has('mac')
@@ -24,9 +24,9 @@ endif
 
 if has('win64')
         set transparency=0          " opacity
-        set guifont=Ricty:h16       " font
-        set columns=120             " width
-        set lines=50                " line
+        set guifont=Ricty:h14       " font
+        set columns=100             " width
+        set lines=40                " line
 endif
 
 set mouse=                          " マウス操作を無効に
