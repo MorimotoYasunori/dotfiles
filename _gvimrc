@@ -30,7 +30,6 @@ if has('win64')
 endif
 
 if has('gui_gtk2')
-  set transparency=0                " opacity
   set guifont=Ricty\ 15             " font
   set columns=120                   " width
   set lines=45                      " line
