@@ -10,12 +10,6 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim " neobundleのディレクトリ
 endif
 
-if has('gui_gtk2')
-  set guifont=Inconsolata\ 12
-  set columns=100
-  set lines=35
-endif
-
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
@@ -97,7 +91,9 @@ set showmatch
 set smarttab
  
 " migemoの辞書をutf-8に指定
-set migemodict=/usr/local/share/migemo/utf-8/migemo-dict
+if has('migemo')
+  set migemodict=/usr/local/share/migemo/utf-8/migemo-dict
+endif
 
 " grep検索を設定する
 set grepformat=%f:%l:%m,%f:%l%m,%f\ \ %l%m,%f
