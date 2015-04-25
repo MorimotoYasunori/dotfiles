@@ -29,6 +29,12 @@ if has('win64')
         set lines=40                " line
 endif
 
+if has('gui_gtk2')
+  set guifont=Ricty\ 12             " font
+  set columns=100                   " width
+  set lines=40                      " line
+endif
+
 set mouse=                          " マウス操作を無効に
 set nomousefocus                    " マウス移動によるフォーカス切り替えを無効に
 

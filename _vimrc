@@ -10,12 +10,6 @@ if has('vim_starting')
   set runtimepath+=~/.vim/bundle/neobundle.vim " neobundleのディレクトリ
 endif
 
-"if has('gui_gtk2')
-"  set guifont=Inconsolata\ 15
-"  set columns=100
-"  set lines=40
-"endif
-
 call neobundle#begin(expand('~/.vim/bundle/'))
 
 " Let NeoBundle manage NeoBundle
