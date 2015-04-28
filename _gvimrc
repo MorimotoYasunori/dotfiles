@@ -17,14 +17,14 @@ colorscheme solarized
 
 if has('mac')
         set transparency=05         " opacity
-        set guifont=Ricyt:h16       "font
+        set guifont=Ricyt:h16       " font
         set columns=120             " width
         set lines=50                " line
 endif
 
 if has('win64')
         set transparency=0          " opacity
-        set guifont=Ricty:h14       " font
+        set guifont=Ricty:h15       " font
         set columns=100             " width
         set lines=40                " line
 endif

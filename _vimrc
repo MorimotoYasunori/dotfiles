@@ -36,6 +36,7 @@ NeoBundle 'tpope/vim-haml'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'scrooloose/nerdtree'
 NeoBundle 'haya14busa/vim-migemo'
+NeoBundle 'slim-template/vim-slim'
 
 call neobundle#end()
 
