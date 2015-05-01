@@ -24,7 +24,7 @@ endif
 
 if has('win64')
         set transparency=0          " opacity
-        set guifont=Ricty:h14       " font
+        set guifont=Ricty:h15       " font
         set columns=100             " width
         set lines=40                " line
 endif
@@ -36,5 +36,4 @@ if has('gui_gtk2')
 endif
 
 set mouse=                          " マウス操作を無効に
-set nomousefocus                    " マウス移動によるフォーカス切り替えを無効に
-
+set nomousefocus                    " マウス移動によるフォーカス切り替えを無効に 
