@@ -9,3 +9,4 @@
 /vimfiles/undo/
 .emacs.d/el-get/
 .emacs.d/server/
+.vimrc.local
