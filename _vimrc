@@ -112,6 +112,9 @@ nnoremap <Up> gk
 nnoremap gj j
 nnoremap gk k
 
+" MacVimでCtrl-Vが矩形モードではなくペーストになってしまう問題を回避。
+nnoremap <C-V> <C-V>
+
 "全角スペースの定義
 hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue 
 " 全角スペースの色を変更
