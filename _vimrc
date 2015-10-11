@@ -120,7 +120,7 @@ hi ZenkakuSpace gui=underline guibg=DarkBlue cterm=underline ctermfg=LightBlue
 " 全角スペースの色を変更
 match ZenkakuSpace /　/ 
 " ESCでIMEを確実にOFF
-"inoremap <ESC> <ESC>:set iminsert=0<CR> 
+inoremap <ESC> <ESC>:set iminsert=0<CR> 
 
 " If there are uninstalled bundles found on startup,
 " this will conveniently prompt you to install them.
