@@ -23,8 +23,8 @@ if has('mac')
 endif
 
 if has('win64')
-        set transparency=0          " opacity
-        set guifont=Ricty:h15       " font
+        set transparency=05         " opacity
+        set guifont=Ricty:h13.5     " font
         set columns=100             " width
         set lines=40                " line
 endif
