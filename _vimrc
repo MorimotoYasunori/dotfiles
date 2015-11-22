@@ -17,10 +17,11 @@ call neobundle#begin(expand('~/.vim/bundle/'))
 NeoBundleFetch 'Shougo/neobundle.vim'
 
 " My Bundles here:
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplcache.vim'
-NeoBundle 'Shougo/neosnippet.vim'
+NeoBundle 'Shougo/neobundle'
+NeoBundle 'Shougo/unite'
+NeoBundle 'Shougo/neocomplcache'
+NeoBundle 'Shougo/neosnippet'
+NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'vim-jp/autofmt'
 NeoBundle 'vim-ruby/vim-ruby'
@@ -55,7 +56,7 @@ set autoread                   " 更新時自動再読込み
 set hidden                     " 編集中でも他のファイルを開けるようにする
 set noswapfile                 " スワップファイルを作らない
 set nobackup                   " バックアップを取らない
-set clipboard=unnamed          "クリップボードを無名レジスタと連携する
+set clipboard=unnamed          " クリップボードを無名レジスタと連携する
 
 " Indent ----------------------
 " tabstop:                         " Tab文字を画面上で何文字分に展開するか
