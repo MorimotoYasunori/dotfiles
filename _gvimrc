@@ -30,10 +30,14 @@ if has('win64')
 endif
 
 if has('gui_gtk2')
-  set guifont=Ricty\ 15             " font
-  set columns=100                   " width
-  set lines=40                      " line
+  set guifont=Ricty\ 13.5           " font
+  set columns=80                    " width
+  set lines=35                      " line
 endif
 
 set mouse=                          " マウス操作を無効に
 set nomousefocus                    " マウス移動によるフォーカス切り替えを無効に 
+
+" MacVimでCtrl-Vが矩形モードではなくペーストになってしまう問題を回避。
+nnoremap <C-V> <C-V>
+
