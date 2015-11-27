@@ -22,7 +22,7 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplete.vim'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
-"NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'morhetz/gruvbox'
 NeoBundle 'vim-jp/autofmt'
 NeoBundle 'vim-ruby/vim-ruby'
@@ -49,12 +49,12 @@ filetype indent on
 "let g:solarized_visibility='normal'
 
 syntax enable
-"colorscheme solarized          " カラースキームの設定
-"set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる
 if !has("gui_running")
   let g:gruvbox_italic=0
 endif
-colorscheme gruvbox
+set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる
+"colorscheme solarized
+colorscheme gruvbox            " カラースキームの設定
 
 " File ------------------------
 set autoread                   " 更新時自動再読込み
