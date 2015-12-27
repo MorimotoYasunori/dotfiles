@@ -16,27 +16,27 @@ set background=dark
 colorscheme gruvbox
 
 if has('mac')
-        set transparency=05         " opacity
-        set guifont=Ricty:h16       " font
-        set columns=120             " width
-        set lines=50                " line
+        set transparency=05           " opacity
+        set guifont=Ricty:h16         " font
+        set columns=120               " width
+        set lines=50                  " line
 endif
 
 if has('win64')
-        set transparency=05         " opacity
-        set guifont=Ricty:h13.5     " font
-        set columns=100             " width
-        set lines=40                " line
+        set transparency=05           " opacity
+        set guifont=Ricty:h13.5       " font
+        set columns=100               " width
+        set lines=40                  " line
 endif
 
 if has('gui_gtk2')
-  set guifont=Ricty\ 13.5           " font
-  set columns=80                    " width
-  set lines=35                      " line
+  set guifont=Ricty\ Diminished\ 13.5 " font
+  set columns=120                     " width
+  set lines=50                        " line
 endif
 
-set mouse=                          " マウス操作を無効に
-set nomousefocus                    " マウス移動によるフォーカス切り替えを無効に 
+set mouse=                            " マウス操作を無効に
+set nomousefocus                      " マウス移動によるフォーカス切り替えを無効に 
 
 " MacVimでCtrl-Vが矩形モードではなくペーストになってしまう問題を回避。
 nnoremap <C-V> <C-V>
