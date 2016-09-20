@@ -1,59 +1,34 @@
 " Common ----------------------
-set nocompatible               " vim互換をオフにする
 filetype off
 
-set encoding=utf-8
-set fileencodings=utf-8,iso-2022-jp,euc-jp,sjis
-set fileformats=unix,dos,mac
-
-if has('vim_starting')
-  set runtimepath+=~/.vim/bundle/neobundle.vim " neobundleのディレクトリ
+if &compatible
+  set nocompatible
 endif
 
-call neobundle#begin(expand('~/.vim/bundle/'))
+set runtimepath+=~/.vim/bundle/repos/github.com/Shougo/dein.vim 
 
-" Let NeoBundle manage NeoBundle
+call dein#begin(expand('~/.vim/bundle/'))
+
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+call dein#add('Shougo/dein.vim')
 
 " My Bundles here:
-NeoBundle 'Shougo/neobundle.vim'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neocomplete.vim'
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'morhetz/gruvbox'
-NeoBundle 'vim-jp/autofmt'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'tpope/vim-endwise'
-NeoBundle 'tpope/vim-rails'
-NeoBundle 'tpope/vim-haml'
-NeoBundle 'tpope/vim-markdown'
-NeoBundle 'scrooloose/nerdtree'
-NeoBundle 'haya14busa/vim-migemo'
-NeoBundle 'slim-template/vim-slim'
-
-call neobundle#end()
+call dein#add('Shougo/dein.vim')
+call dein#add('Shougo/vimproc.vim')
+call dein#add('osyo-manga/vim-vigemo')
+call dein#add('altercation/vim-colors-solarized')
+call dein#add('morhetz/gruvbox')
+call dein#add('vim-jp/autofmt')
+call dein#add('scrooloose/nerdtree')
 
 filetype plugin indent on      " required!
 filetype indent on
-
-"let g:solarized_temcolors=16
-"let g:solarized_termtrans=1
-"let g:solarized_degrade=0
-"let g:solarized_bold=0
-"let g:solarized_underline=0
-"let g:solarized_italic=0
-"let g:solarized_contrast='normal'
-"let g:solarized_visibility='normal'
 
 syntax enable
 if !has("gui_running")
   let g:gruvbox_italic=0
 endif
 set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる
-"colorscheme solarized
 colorscheme gruvbox            " カラースキームの設定
 
 " File ------------------------
@@ -62,6 +37,7 @@ set hidden                     " 編集中でも他のファイルを開ける�
 set noswapfile                 " スワップファイルを作らない
 set nobackup                   " バックアップを取らない
 set clipboard=unnamed          " クリップボードを無名レジスタと連携する
+set clipboard+=unnamed
 
 " Indent ----------------------
 " tabstop:                         " Tab文字を画面上で何文字分に展開するか
@@ -128,6 +104,6 @@ match ZenkakuSpace /　/
 " ESCでIMEを確実にOFF
 inoremap <ESC> <ESC>:set iminsert=0<CR> 
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
+if dein#check_install()
+  call dein#install()
+endif
