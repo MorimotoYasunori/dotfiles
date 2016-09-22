@@ -72,6 +72,9 @@ set showmatch
  
 "新しい行を作った時に高度な自動インデントを行う
 set smarttab
+
+" ctagのPATHを設定
+set tags=<tags_path>
  
 " migemoの辞書をutf-8に指定
 if has('migemo')
