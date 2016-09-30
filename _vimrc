@@ -20,6 +20,7 @@ call dein#add('altercation/vim-colors-solarized')
 call dein#add('morhetz/gruvbox')
 call dein#add('vim-jp/autofmt')
 call dein#add('scrooloose/nerdtree')
+call dein#add('neovimhaskell/haskell-vim')
 
 filetype plugin indent on      " required!
 filetype indent on
