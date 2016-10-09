@@ -21,6 +21,7 @@ call dein#add('morhetz/gruvbox')
 call dein#add('vim-jp/autofmt')
 call dein#add('scrooloose/nerdtree')
 call dein#add('neovimhaskell/haskell-vim')
+call dein#add('szw/vim-tags')
 
 filetype plugin indent on      " required!
 filetype indent on
