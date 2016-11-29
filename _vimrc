@@ -18,6 +18,7 @@ call dein#add('Shougo/vimproc.vim')
 call dein#add('osyo-manga/vim-vigemo')
 call dein#add('altercation/vim-colors-solarized')
 call dein#add('morhetz/gruvbox')
+call dein#add('aereal/vim-colors-japanesque')
 call dein#add('vim-jp/autofmt')
 call dein#add('scrooloose/nerdtree')
 call dein#add('neovimhaskell/haskell-vim')
@@ -30,8 +31,8 @@ syntax enable
 if !has("gui_running")
   let g:gruvbox_italic=0
 endif
-set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる
-colorscheme gruvbox            " カラースキームの設定
+set background=dark            " 背景色の傾向(カラースキームがそれに併せて色の明暗を変えてくれる)
+colorscheme gruvbox            " カラースキームの設定(GUI版用のカラースキームを入れている場合はそちらが優先される)
 
 " File ------------------------
 set autoread                   " 更新時自動再読込み

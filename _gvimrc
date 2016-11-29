@@ -14,10 +14,11 @@ set guioptions+=a
 "Color Scheme
 syntax enable
 set background=dark
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme japanesque
 
 if has('mac')
-        set transparency=05           " opacity
+        set transparency=00           " opacity
         set guifont=Ricty:h16         " font
         set columns=120               " width
         set lines=50                  " line
