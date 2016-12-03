@@ -39,6 +39,7 @@ set autoread                   " 更新時自動再読込み
 set hidden                     " 編集中でも他のファイルを開けるようにする
 set noswapfile                 " スワップファイルを作らない
 set nobackup                   " バックアップを取らない
+set undodir=~/var/vim/undo     " アンドゥファイルをホーム直下のvar/vim/undoにまとめる
 set clipboard=unnamed          " クリップボードを無名レジスタと連携する
 set clipboard+=unnamed
 
